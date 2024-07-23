@@ -24,7 +24,7 @@ func binToDec1(bin string) {
 	}
 
 	fmt.Println(n)
-	return
+
 }
 
 // Использование стандартного пакета strconv (strconv.ParseInt(bin, 2, 64))
@@ -37,7 +37,7 @@ func binToDec2(bin string) {
 	}
 
 	fmt.Println(n)
-	return
+
 }
 
 // Самый логичный пример (но без проверки на парсинг)
@@ -52,7 +52,7 @@ func binToDec3(bin string) {
 		dec *= 2
 	}
 	fmt.Println(result)
-	return
+
 }
 
 // Самое плохое решение
@@ -74,8 +74,5 @@ func binToDec4(bin string) {
 		bb-- // Уменьшается значение переменной bb на 1 для обновления степени числа 2 в следующей итерации.
 
 	}
-
 	fmt.Println(result)
-
-	return
 }
