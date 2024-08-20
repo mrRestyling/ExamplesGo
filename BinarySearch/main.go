@@ -11,7 +11,9 @@ func main() {
 
 	// fmt.Println(LinearSort(arr, 100))
 	// fmt.Println(BinarySearch(arr, 100))
-	fmt.Println(JumpSearch(arr, 10))
+	// fmt.Println(JumpSearch(arr, 10))
+	fmt.Println(new(arr, 3))
+
 }
 
 func LinearSort(arr []int, s int) int {
@@ -69,5 +71,27 @@ func JumpSearch(arr []int, s int) int {
 		}
 	}
 
+	return -1
+}
+
+func new(arr []int, s int) int {
+
+	low := 0
+	high := len(arr) - 1
+
+	// mid := len(arr) / 2
+
+	for low <= high {
+
+		mid := (low + high) / 2
+
+		if arr[mid] == s {
+			return mid
+		} else if arr[mid] < s {
+			low = mid + 1
+		} else {
+			high = mid - 1
+		}
+	}
 	return -1
 }
