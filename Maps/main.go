@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sort"
+	"sync"
 )
 
 // создайте функцию getSortedKeys() ниже
@@ -26,7 +27,10 @@ func main() {
 
 	// praktikumVebinarPrimer2()
 
-	web()
+	// web()
+
+	// justMap()
+	syncMap()
 }
 
 func praktikum() {
@@ -120,4 +124,56 @@ func web() {
 
 	_, ok = cashe["key"]
 	fmt.Println(ok)
+}
+
+func justMap() {
+	m := make(map[string]int)
+
+	m["one"] = 1
+	m["two"] = 2
+
+	var wg sync.WaitGroup
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		fmt.Println("Reading from map:", m["one"])
+	}()
+
+	wg.Add(1)
+	go func() {
+		defer wg.Done()
+		m["three"] = 3
+	}()
+
+	wg.Wait()
+
+	// Print the final state of the map
+	fmt.Println("Final map:", m)
+
+}
+
+func syncMap() {
+
+	m := &sync.Map{}
+
+	m.Store(1, "one")
+	m.Store(2, 2)
+	m.Store("three", 3)
+	m.Store(4, 4)
+
+	value, ok := m.Load("three")
+	if ok {
+		fmt.Println(value)
+	} else {
+		fmt.Println("такого нет")
+	}
+
+	m.Delete("three")
+
+	m.Range(func(key, value any) bool {
+		fmt.Println("Ключ:", key, "Значение:", value)
+		return true
+	})
+
 }
