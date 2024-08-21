@@ -24,7 +24,9 @@ func main() {
 
 	// praktikumVebinar()
 
-	praktikumVebinarPrimer2()
+	// praktikumVebinarPrimer2()
+
+	web()
 }
 
 func praktikum() {
@@ -93,7 +95,6 @@ func praktikumVebinarPrimer() {
 		}
 	}
 	fmt.Println(arr2)
-
 }
 
 func praktikumVebinarPrimer2() {
@@ -106,4 +107,17 @@ func praktikumVebinarPrimer2() {
 	m["chan"] = make(chan int)
 	m["func"] = func() {}
 	m["interface"] = interface{}(1)
+}
+
+func web() {
+
+	cashe := make(map[string]struct{})
+
+	_, ok := cashe["key"]
+	fmt.Println(ok)
+
+	cashe["key"] = struct{}{}
+
+	_, ok = cashe["key"]
+	fmt.Println(ok)
 }
