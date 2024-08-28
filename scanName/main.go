@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	scanFullName()
+
 }
 
 func scanFullName() {
