@@ -6,11 +6,6 @@ import (
 	"time"
 )
 
-// На диске лежит очень большой файл объёмом более 100 Gb.
-//  Файл содержит целые числа — по одному в каждой строке.
-//  Нужно отсортировать их по возрастанию.
-//  Опишите алгоритм решения такой задачи
-
 func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
@@ -19,10 +14,10 @@ func main() {
 
 	go func() {
 		// делаем что-то
-		time.Sleep(10 * time.Second)
+		time.Sleep(2 * time.Second)
 		// если контекст отменен, вернем ошибку
 		if ctx.Err() != nil {
-			fmt.Println("Функция завершила работу")
+			fmt.Println("Функция завершила работу с ошибкой")
 			return
 		}
 		// если контекст не отменен, продолжаем работать
