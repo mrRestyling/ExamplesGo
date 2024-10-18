@@ -4,26 +4,30 @@
 
 Данный репозиторий содержит реализацию различных примеров на языке Go:
 
-- Add Two Numbers
+- ## Add Two Numbers
 Вам даны два непустых связанных списка, представляющих два неотрицательных целых числа. Цифры хранятся в обратном порядке , и каждый из их узлов содержит одну цифру. Сложите два числа и верните сумму в виде связанного списка.
 https://leetcode.com/problems/add-two-numbers/description/
 
-- BinarySearch 
+- ## BinarySearch 
 Бинарный поиск
 
-- BinaryToDecimal
+- ## BinaryToDecimal
 Примеры перевода из двоичной системы в десятичную
 
-- ExponentiationCalc
+- ## ExponentiationCalc
 Возведение в степень
 
-- Factorial
+- ## Factorial
 Получение факториала числа с помощью рекурсивной функции
 
-- GarbageCollector
+- ## GarbageCollector
 Стек, куча, баласт
 
-- GIN (framework)
+- ## GIN (framework)
 Пример использования фреймворка Gin
 
-- 21
+- ## Int
+Крайние числа int и их особенность
+
+- ## Logger
+Создание логирования
