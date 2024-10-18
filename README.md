@@ -51,6 +51,6 @@ https://leetcode.com/problems/add-two-numbers/description/
 Манипуляции с указателем
 
 - ### ScanName
-Сканирование входных данных
+Сканирование входных данных (fmt.Scan и os.Stdin)
 
 

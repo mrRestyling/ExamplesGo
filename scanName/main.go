@@ -1,13 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
 
 func main() {
-	scanFullName()
+	// scanSIMPLE()
+	scanBUFIO()
 
 }
 
-func scanFullName() {
+func scanSIMPLE() {
 	var firstName, secondName string
 
 	fmt.Println("Введите Ваше имя:")
@@ -17,4 +22,17 @@ func scanFullName() {
 	fmt.Scanf("%s\n", &secondName)
 
 	fmt.Printf("Ура, нас посетил:\n -%s %s-", firstName, secondName)
+}
+
+func scanBUFIO() {
+
+	in := bufio.NewReader(os.Stdin)
+	out := bufio.NewWriter(os.Stdout)
+	defer out.Flush()
+
+	var num int
+
+	fmt.Fscan(in, &num)
+
+	fmt.Fprintln(out, num)
 }
