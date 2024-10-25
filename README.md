@@ -20,6 +20,9 @@ https://leetcode.com/problems/add-two-numbers/description/
 - ### Context
 Использование контекста и его отмены
 
+- ### ExampleNeyroGo
+Простейшая нейросетка
+
 - ### ExponentiationCalc
 Возведение в степень
 
