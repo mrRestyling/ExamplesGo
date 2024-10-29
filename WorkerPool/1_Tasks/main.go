@@ -70,11 +70,14 @@ func main() {
 
 	// Отправляем задачи всем рабочим горутинам
 	var wg sync.WaitGroup
+
 	wg.Add(len(tasks))
+
 	for _, task := range tasks {
 		worker := workerPool[0]
 		worker.TaskCh <- task
 		workerPool = append(workerPool[1:], worker)
+
 		go func() {
 			defer wg.Done()
 			result := <-worker.Results
