@@ -56,4 +56,6 @@ https://leetcode.com/problems/add-two-numbers/description/
 - ### ScanName
 Сканирование входных данных (fmt.Scan и os.Stdin)
 
+- ### WorkerPool
+Использование рабочих горутин для параллельной обработки задач.
 
