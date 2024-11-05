@@ -1,4 +1,4 @@
-# ExamplesGo
+# ExamplesGo/
 
 ## Описание
 
