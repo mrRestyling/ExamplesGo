@@ -32,7 +32,7 @@ type Person struct {
 func countGO() {
 
 	people := []Person{
-		{"John", 25},
+		{"John", 31},
 		{"Alice", 25},
 		{"Bob", 30},
 	}
