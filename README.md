@@ -44,6 +44,9 @@ https://leetcode.com/problems/add-two-numbers/description/
 - ### Maps
 Маниппуляции с мапой
 
+- ### MicroS
+Связка серверов и клиента
+
 - ### OOPInGo
 Использование интерфейса и его методов на примере расчета периметра и площади
 
@@ -55,6 +58,9 @@ https://leetcode.com/problems/add-two-numbers/description/
 
 - ### ScanName
 Сканирование входных данных (fmt.Scan и os.Stdin)
+
+- ### TargetNames
+Выводим имена собственные из текста
 
 - ### WorkerPool
 Использование рабочих горутин для параллельной обработки задач.
