@@ -33,11 +33,10 @@ func Text(text string) string {
 			noNameMap[str]++
 
 		}
-
 	}
 
 	var strArr []string
-	for tStr, _ := range nameMap {
+	for tStr := range nameMap {
 		strArr = append(strArr, tStr)
 	}
 
