@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	fmt.Println(fibonacci(8))
-	fmt.Println(fibonacciARR(8))
+	fmt.Println(fibonacci(54))
+	fmt.Println(fibonacciARR(54))
 
 }
 
